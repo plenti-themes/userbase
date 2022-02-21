@@ -2,9 +2,9 @@
 	"build": "public",
 	"baseurl": "/userbase/",
 	"routes": {
-		"pages": "/:filename",
-		"login": "/user/login",
-		"register": "/user/register"
+		"pages": ":filename",
+		"login": "user/login",
+		"register": "user/register"
 	},
 	"local": {
 		"port": 3000
