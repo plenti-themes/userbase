@@ -1,0 +1,11 @@
+{
+	"build": "public",
+	"routes": {
+		"pages": "/:filename",
+		"login": "/user/login",
+		"register": "/user/register"
+	},
+	"local": {
+		"port": 3000
+	}
+}
