@@ -11,13 +11,13 @@ const allContent = [{
 }
 },{
 "pager": 1,
-"path": "/user/login",
+"path": "user/login",
 "type": "login",
 "filename": "login.json",
 "fields": {}
 },{
 "pager": 1,
-"path": "/attribution",
+"path": "attribution",
 "type": "pages",
 "filename": "attribution.json",
 "fields": {
@@ -47,7 +47,7 @@ const allContent = [{
 }
 },{
 "pager": 1,
-"path": "/user/register",
+"path": "user/register",
 "type": "register",
 "filename": "register.json",
 "fields": {}
