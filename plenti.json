@@ -1,5 +1,6 @@
 {
 	"build": "public",
+	"baseurl": "/userbase/",
 	"routes": {
 		"pages": "/:filename",
 		"login": "/user/login",

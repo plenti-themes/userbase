@@ -20,7 +20,7 @@
             userbaseStore.subscribe(userbase => {
                 userbase.signIn({username, password})
                     .then((user) => userStore.set(user))
-                    .then(() => window.history.pushState('', 'Login', '/user'))
+                    .then(() => window.history.pushState('', 'Login', 'user'))
                     .catch(error => {
                         validationErrs = [...validationErrs, error.message];
                         buttonTxt = "Sign in";
@@ -45,7 +45,7 @@
 {:then _}
     {#if loaded}
         {#if user}
-            { window.history.pushState('', 'Login', '/user') }
+            { window.history.pushState('', 'Login', 'user') }
         {:else}
             <form>
                 <FormErrs {validationErrs} />
@@ -58,7 +58,7 @@
                     <input id="password" type="password" bind:value={password} />
                 </div>
                 <button on:click={signIn} type="button">{buttonTxt}</button>
-                <div class="switch">Don't have an account? <a href="/user/register">Sign up</a></div>
+                <div class="switch">Don't have an account? <a href="user/register">Sign up</a></div>
             </form>
         {/if}        
     {/if}        

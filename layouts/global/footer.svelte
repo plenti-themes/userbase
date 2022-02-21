@@ -3,17 +3,17 @@
         <div class="column">
             <div class="label">Company</div>
             <ul>
-                <li><a href="/about">about</a></li>
-                <li><a href="/contact">contact</a></li>
-                <li><a href="/pricing">pricing</a></li>
+                <li><a href="about">about</a></li>
+                <li><a href="contact">contact</a></li>
+                <li><a href="pricing">pricing</a></li>
             </ul>    
         </div>
         <div class="column">
             <div class="label">Members</div>
             <ul>
-                <li><a href="/contact">support</a></li>
-                <li><a href="/user">sign in</a></li>
-                <li><a href="/user/register">register</a></li>
+                <li><a href="contact">support</a></li>
+                <li><a href="user">sign in</a></li>
+                <li><a href="user/register">register</a></li>
             </ul>
         </div>
         <div class="column">
@@ -28,7 +28,7 @@
             <ul>
                 <li><a href="https://github.com/plenti-themes/userbase" target="blank" rel="noopener noreferrer">repo</a></li>
                 <li><a href="https://plenti.co/themes/userbase" target="blank" rel="noopener noreferrer">theme</a></li>
-                <li><a href="/attribution">attribution</a></li>
+                <li><a href="attribution">attribution</a></li>
             </ul>
         </div>
     </div>

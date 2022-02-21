@@ -22,7 +22,7 @@
         {#if user}
             <Dashboard />
         {:else}
-            { window.history.pushState('', 'Login', '/user/login') }
+            { window.history.pushState('', 'Login', 'user/login') }
         {/if}        
     {/if}
 {/await}

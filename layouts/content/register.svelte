@@ -21,7 +21,7 @@
             userbaseStore.subscribe(userbase => {
                 userbase.signUp({ username, password, rememberMe: 'none' })
                     .then((user) => userStore.set(user))
-                    .then(() => window.history.pushState('', 'Login', '/user'))
+                    .then(() => window.history.pushState('', 'Login', 'user'))
                     .catch(error => {
                         validationErrs = [...validationErrs, error.message];
                         buttonTxt = "Create account";
@@ -46,7 +46,7 @@
 {:then _}
     {#if loaded}
         {#if user}
-            { window.history.pushState('', 'Login', '/user') }
+            { window.history.pushState('', 'Login', 'user') }
         {:else}
             <form>
                 <FormErrs {validationErrs} />
@@ -63,7 +63,7 @@
                     <input id="confirm-password" type="password" bind:value={confirmPass} required />
                 </div>
                 <button on:click={signUp} type="button">{buttonTxt}</button>
-                <div class="switch">Already have an account? <a href="/user/login">Sign in</a></div>
+                <div class="switch">Already have an account? <a href="user/login">Sign in</a></div>
             </form>
         {/if}        
     {/if}        

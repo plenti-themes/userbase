@@ -17,15 +17,15 @@
 </script>
 <nav>
     <div class="container">
-      <span id="brand"><a href="/"><img alt="lightning bolt logo" src="/assets/renewable-energy.svg" />Plenti Userbase</a></span>
+      <span id="brand"><a href="."><img alt="lightning bolt logo" src="assets/renewable-energy.svg" />Plenti Userbase</a></span>
       <span id="links">
-        <a href="/user"><img alt="profile of person" src="/assets/user.svg" /></a>
+        <a href="user"><img alt="profile of person" src="assets/user.svg" /></a>
         <div id="sub-links">
             {#if user}
-                <a href="/user/login" on:click={logout}>Logout</a>
+                <a href="user/login" on:click={logout}>Logout</a>
             {:else}
-                <a href="/user/register">Sign up</a>
-                <a href="/user/login">Sign in</a>
+                <a href="user/register">Sign up</a>
+                <a href="user/login">Sign in</a>
             {/if}
         </div>
       </span>

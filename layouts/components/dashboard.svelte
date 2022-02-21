@@ -25,4 +25,4 @@
 
 <Key />
 
-<a href="/user/login" on:click={logout} class="btn">Logout</a>
+<a href="user/login" on:click={logout} class="btn">Logout</a>

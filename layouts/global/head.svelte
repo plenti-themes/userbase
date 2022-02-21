@@ -1,5 +1,5 @@
 <script>
-  export let title;
+  export let title, env;
 </script>
 
 <head>
@@ -8,10 +8,11 @@
 
   <title>{ title }</title>
 
-  <script type="module" src="/spa/ejected/main.js"></script>
+  <base href="{ env.local ? '/' : env.baseurl }">
+  <script type="module" src="spa/ejected/main.js"></script>
 
-  <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
-  <link rel='stylesheet' href='/spa/bundle.css'>
-  <link rel='stylesheet' href='/assets/global.css'>
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <link rel='stylesheet' href='spa/bundle.css'>
+  <link rel='stylesheet' href='assets/global.css'>
   <script type="text/javascript" src="https://sdk.userbase.com/2/userbase.js"></script>
 </head>
