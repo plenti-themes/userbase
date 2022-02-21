@@ -86,7 +86,7 @@ function create_fragment(ctx) {
 			attr(img0, "alt", "Plenti planarian");
 			if (img1.src !== (img1_src_value = "assets/userbase.png")) attr(img1, "src", img1_src_value);
 			attr(img1, "alt", "Userbase icon");
-			attr(a, "href", "/user");
+			attr(a, "href", "user");
 			attr(a, "class", "btn");
 			attr(section, "class", "svelte-1shzb3t");
 		},

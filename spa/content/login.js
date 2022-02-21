@@ -314,7 +314,7 @@ function create_else_block(ctx) {
 			attr(input1, "id", "password");
 			attr(input1, "type", "password");
 			attr(button, "type", "button");
-			attr(a, "href", "/user/register");
+			attr(a, "href", "user/register");
 			attr(div2, "class", "switch");
 		},
 		m(target, anchor) {
@@ -389,7 +389,7 @@ function create_else_block(ctx) {
 
 // (47:8) {#if user}
 function create_if_block_1(ctx) {
-	let t_value = window.history.pushState("", "Login", "/user") + "";
+	let t_value = window.history.pushState("", "Login", "user") + "";
 	let t;
 
 	return {
@@ -515,7 +515,7 @@ function instance($$self, $$props, $$invalidate) {
 			$$invalidate(0, buttonTxt = "authenticating...");
 
 			userbaseStore.subscribe(userbase => {
-				userbase.signIn({ username, password }).then(user => userStore.set(user)).then(() => window.history.pushState("", "Login", "/user")).catch(error => {
+				userbase.signIn({ username, password }).then(user => userStore.set(user)).then(() => window.history.pushState("", "Login", "user")).catch(error => {
 					$$invalidate(3, validationErrs = [...validationErrs, error.message]);
 					$$invalidate(0, buttonTxt = "Sign in");
 				});

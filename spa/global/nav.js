@@ -51,9 +51,9 @@ function create_else_block(ctx) {
 			this.h();
 		},
 		h() {
-			attr(a0, "href", "/user/register");
+			attr(a0, "href", "user/register");
 			attr(a0, "class", "svelte-1lnuvod");
-			attr(a1, "href", "/user/login");
+			attr(a1, "href", "user/login");
 			attr(a1, "class", "svelte-1lnuvod");
 		},
 		m(target, anchor) {
@@ -93,7 +93,7 @@ function create_if_block(ctx) {
 			this.h();
 		},
 		h() {
-			attr(a, "href", "/user/login");
+			attr(a, "href", "user/login");
 			attr(a, "class", "svelte-1lnuvod");
 		},
 		m(target, anchor) {
@@ -187,16 +187,16 @@ function create_fragment(ctx) {
 		},
 		h() {
 			attr(img0, "alt", "lightning bolt logo");
-			if (img0.src !== (img0_src_value = "/assets/renewable-energy.svg")) attr(img0, "src", img0_src_value);
+			if (img0.src !== (img0_src_value = "assets/renewable-energy.svg")) attr(img0, "src", img0_src_value);
 			attr(img0, "class", "svelte-1lnuvod");
-			attr(a0, "href", "/");
+			attr(a0, "href", ".");
 			attr(a0, "class", "svelte-1lnuvod");
 			attr(span0, "id", "brand");
 			attr(span0, "class", "svelte-1lnuvod");
 			attr(img1, "alt", "profile of person");
-			if (img1.src !== (img1_src_value = "/assets/user.svg")) attr(img1, "src", img1_src_value);
+			if (img1.src !== (img1_src_value = "assets/user.svg")) attr(img1, "src", img1_src_value);
 			attr(img1, "class", "svelte-1lnuvod");
-			attr(a1, "href", "/user");
+			attr(a1, "href", "user");
 			attr(a1, "class", "svelte-1lnuvod");
 			attr(div0, "id", "sub-links");
 			attr(div0, "class", "svelte-1lnuvod");

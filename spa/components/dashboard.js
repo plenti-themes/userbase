@@ -71,7 +71,7 @@ function create_fragment(ctx) {
 			this.h();
 		},
 		h() {
-			attr(a, "href", "/user/login");
+			attr(a, "href", "user/login");
 			attr(a, "class", "btn");
 		},
 		m(target, anchor) {

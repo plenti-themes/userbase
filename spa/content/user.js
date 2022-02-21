@@ -174,7 +174,7 @@ function create_if_block(ctx) {
 
 // (24:8) {:else}
 function create_else_block(ctx) {
-	let t_value = window.history.pushState("", "Login", "/user/login") + "";
+	let t_value = window.history.pushState("", "Login", "user/login") + "";
 	let t;
 
 	return {

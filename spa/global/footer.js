@@ -323,25 +323,25 @@ function create_fragment(ctx) {
 		},
 		h() {
 			attr(div0, "class", "label svelte-1b0s0c7");
-			attr(a0, "href", "/about");
+			attr(a0, "href", "about");
 			attr(a0, "class", "svelte-1b0s0c7");
 			attr(li0, "class", "svelte-1b0s0c7");
-			attr(a1, "href", "/contact");
+			attr(a1, "href", "contact");
 			attr(a1, "class", "svelte-1b0s0c7");
 			attr(li1, "class", "svelte-1b0s0c7");
-			attr(a2, "href", "/pricing");
+			attr(a2, "href", "pricing");
 			attr(a2, "class", "svelte-1b0s0c7");
 			attr(li2, "class", "svelte-1b0s0c7");
 			attr(ul0, "class", "svelte-1b0s0c7");
 			attr(div1, "class", "column svelte-1b0s0c7");
 			attr(div2, "class", "label svelte-1b0s0c7");
-			attr(a3, "href", "/contact");
+			attr(a3, "href", "contact");
 			attr(a3, "class", "svelte-1b0s0c7");
 			attr(li3, "class", "svelte-1b0s0c7");
-			attr(a4, "href", "/user");
+			attr(a4, "href", "user");
 			attr(a4, "class", "svelte-1b0s0c7");
 			attr(li4, "class", "svelte-1b0s0c7");
-			attr(a5, "href", "/user/register");
+			attr(a5, "href", "user/register");
 			attr(a5, "class", "svelte-1b0s0c7");
 			attr(li5, "class", "svelte-1b0s0c7");
 			attr(ul1, "class", "svelte-1b0s0c7");
@@ -370,7 +370,7 @@ function create_fragment(ctx) {
 			attr(a9, "rel", "noopener noreferrer");
 			attr(a9, "class", "svelte-1b0s0c7");
 			attr(li9, "class", "svelte-1b0s0c7");
-			attr(a10, "href", "/attribution");
+			attr(a10, "href", "attribution");
 			attr(a10, "class", "svelte-1b0s0c7");
 			attr(li10, "class", "svelte-1b0s0c7");
 			attr(ul3, "class", "svelte-1b0s0c7");

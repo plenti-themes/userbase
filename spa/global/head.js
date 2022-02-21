@@ -27,15 +27,18 @@ function create_fragment(ctx) {
 	let title_1;
 	let t2;
 	let t3;
+	let base;
+	let base_href_value;
+	let t4;
 	let script0;
 	let script0_src_value;
-	let t4;
-	let link0;
 	let t5;
-	let link1;
+	let link0;
 	let t6;
-	let link2;
+	let link1;
 	let t7;
+	let link2;
+	let t8;
 	let script1;
 	let script1_src_value;
 
@@ -49,14 +52,16 @@ function create_fragment(ctx) {
 			title_1 = element("title");
 			t2 = text(/*title*/ ctx[0]);
 			t3 = space();
-			script0 = element("script");
+			base = element("base");
 			t4 = space();
-			link0 = element("link");
+			script0 = element("script");
 			t5 = space();
-			link1 = element("link");
+			link0 = element("link");
 			t6 = space();
-			link2 = element("link");
+			link1 = element("link");
 			t7 = space();
+			link2 = element("link");
+			t8 = space();
 			script1 = element("script");
 			this.h();
 		},
@@ -72,16 +77,18 @@ function create_fragment(ctx) {
 			t2 = claim_text(title_1_nodes, /*title*/ ctx[0]);
 			title_1_nodes.forEach(detach);
 			t3 = claim_space(head_nodes);
+			base = claim_element(head_nodes, "BASE", { href: true });
+			t4 = claim_space(head_nodes);
 			script0 = claim_element(head_nodes, "SCRIPT", { type: true, src: true });
 			var script0_nodes = children(script0);
 			script0_nodes.forEach(detach);
-			t4 = claim_space(head_nodes);
-			link0 = claim_element(head_nodes, "LINK", { rel: true, type: true, href: true });
 			t5 = claim_space(head_nodes);
-			link1 = claim_element(head_nodes, "LINK", { rel: true, href: true });
+			link0 = claim_element(head_nodes, "LINK", { rel: true, type: true, href: true });
 			t6 = claim_space(head_nodes);
-			link2 = claim_element(head_nodes, "LINK", { rel: true, href: true });
+			link1 = claim_element(head_nodes, "LINK", { rel: true, href: true });
 			t7 = claim_space(head_nodes);
+			link2 = claim_element(head_nodes, "LINK", { rel: true, href: true });
+			t8 = claim_space(head_nodes);
 			script1 = claim_element(head_nodes, "SCRIPT", { type: true, src: true });
 			var script1_nodes = children(script1);
 			script1_nodes.forEach(detach);
@@ -92,15 +99,16 @@ function create_fragment(ctx) {
 			attr(meta0, "charset", "utf-8");
 			attr(meta1, "name", "viewport");
 			attr(meta1, "content", "width=device-width,initial-scale=1");
+			attr(base, "href", base_href_value = /*env*/ ctx[1].local ? "/" : /*env*/ ctx[1].baseurl);
 			attr(script0, "type", "module");
-			if (script0.src !== (script0_src_value = "/spa/ejected/main.js")) attr(script0, "src", script0_src_value);
+			if (script0.src !== (script0_src_value = "spa/ejected/main.js")) attr(script0, "src", script0_src_value);
 			attr(link0, "rel", "icon");
 			attr(link0, "type", "image/svg+xml");
-			attr(link0, "href", "/assets/logo.svg");
+			attr(link0, "href", "assets/logo.svg");
 			attr(link1, "rel", "stylesheet");
-			attr(link1, "href", "/spa/bundle.css");
+			attr(link1, "href", "spa/bundle.css");
 			attr(link2, "rel", "stylesheet");
-			attr(link2, "href", "/assets/global.css");
+			attr(link2, "href", "assets/global.css");
 			attr(script1, "type", "text/javascript");
 			if (script1.src !== (script1_src_value = "https://sdk.userbase.com/2/userbase.js")) attr(script1, "src", script1_src_value);
 		},
@@ -113,18 +121,24 @@ function create_fragment(ctx) {
 			append(head, title_1);
 			append(title_1, t2);
 			append(head, t3);
-			append(head, script0);
+			append(head, base);
 			append(head, t4);
-			append(head, link0);
+			append(head, script0);
 			append(head, t5);
-			append(head, link1);
+			append(head, link0);
 			append(head, t6);
-			append(head, link2);
+			append(head, link1);
 			append(head, t7);
+			append(head, link2);
+			append(head, t8);
 			append(head, script1);
 		},
 		p(ctx, [dirty]) {
 			if (dirty & /*title*/ 1) set_data(t2, /*title*/ ctx[0]);
+
+			if (dirty & /*env*/ 2 && base_href_value !== (base_href_value = /*env*/ ctx[1].local ? "/" : /*env*/ ctx[1].baseurl)) {
+				attr(base, "href", base_href_value);
+			}
 		},
 		i: noop,
 		o: noop,
@@ -135,19 +149,20 @@ function create_fragment(ctx) {
 }
 
 function instance($$self, $$props, $$invalidate) {
-	let { title } = $$props;
+	let { title } = $$props, { env } = $$props;
 
 	$$self.$$set = $$props => {
 		if ("title" in $$props) $$invalidate(0, title = $$props.title);
+		if ("env" in $$props) $$invalidate(1, env = $$props.env);
 	};
 
-	return [title];
+	return [title, env];
 }
 
 class Component extends SvelteComponent {
 	constructor(options) {
 		super();
-		init(this, options, instance, create_fragment, safe_not_equal, { title: 0 });
+		init(this, options, instance, create_fragment, safe_not_equal, { title: 0, env: 1 });
 	}
 }
 
